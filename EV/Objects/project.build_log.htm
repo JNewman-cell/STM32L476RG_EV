@@ -1,0 +1,195 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: sdfa Jack, dafs, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Jack\Documents\final_project\L3B\project.uvprojx
+Project File Date:  03/21/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+src/main.c(13): warning: In file included from...
+src/stm32l476xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+src/main.c(20): warning: In file included from...
+src/Display.h(46): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+src/main.c(23): warning: no previous extern declaration for non-static variable 'strTime' [-Wmissing-variable-declarations]
+char strTime[12] = {0};
+     ^
+src/main.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char strTime[12] = {0};
+^
+src/main.c(24): warning: no previous extern declaration for non-static variable 'strDate' [-Wmissing-variable-declarations]
+char strDate[12] = {0};
+     ^
+src/main.c(24): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char strDate[12] = {0};
+^
+src/main.c(26): warning: no previous extern declaration for non-static variable 'currentValue' [-Wmissing-variable-declarations]
+uint32_t volatile currentValue = 0;
+                  ^
+src/main.c(26): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t volatile currentValue = 0;
+^
+src/main.c(27): warning: no previous extern declaration for non-static variable 'lastValue' [-Wmissing-variable-declarations]
+uint32_t volatile lastValue = 0;
+                  ^
+src/main.c(27): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t volatile lastValue = 0;
+^
+src/main.c(28): warning: no previous extern declaration for non-static variable 'overflowCount' [-Wmissing-variable-declarations]
+uint32_t volatile overflowCount = 0;
+                  ^
+src/main.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t volatile overflowCount = 0;
+^
+src/main.c(29): warning: no previous extern declaration for non-static variable 'timeInterval' [-Wmissing-variable-declarations]
+uint32_t volatile timeInterval = 0;
+                  ^
+src/main.c(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t volatile timeInterval = 0;
+^
+src/main.c(30): warning: no previous extern declaration for non-static variable 'count' [-Wmissing-variable-declarations]
+uint32_t volatile count = 0;
+                  ^
+src/main.c(30): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t volatile count = 0;
+^
+src/main.c(31): warning: no previous extern declaration for non-static variable 'distance' [-Wmissing-variable-declarations]
+uint32_t volatile distance = 0;
+                  ^
+src/main.c(31): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t volatile distance = 0;
+^
+src/main.c(36): warning: no previous prototype for function 'Init_USARTx' [-Wmissing-prototypes]
+void Init_USARTx(int x) {
+     ^
+src/main.c(36): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Init_USARTx(int x) {
+^
+static 
+src/main.c(50): warning: no previous prototype for function 'Motor1_GPIO_Init' [-Wmissing-prototypes]
+void Motor1_GPIO_Init(void)
+     ^
+src/main.c(50): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Motor1_GPIO_Init(void)
+^
+static 
+src/main.c(68): warning: no previous prototype for function 'Motor2_GPIO_Init' [-Wmissing-prototypes]
+void Motor2_GPIO_Init(void)
+     ^
+src/main.c(68): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Motor2_GPIO_Init(void)
+^
+static 
+src/main.c(85): warning: no previous prototype for function 'Timer2_Init' [-Wmissing-prototypes]
+void  Timer2_Init(void){
+      ^
+src/main.c(85): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void  Timer2_Init(void){
+^
+static 
+src/main.c(106): warning: no previous prototype for function 'Timer3_Init' [-Wmissing-prototypes]
+void Timer3_Init(void){
+     ^
+src/main.c(106): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Timer3_Init(void){
+^
+static 
+src/main.c(127): warning: no previous prototype for function 'Motor1_Backward' [-Wmissing-prototypes]
+void Motor1_Backward(void){
+     ^
+src/main.c(127): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Motor1_Backward(void){
+^
+static 
+src/main.c(132): warning: no previous prototype for function 'Motor1_Forward' [-Wmissing-prototypes]
+void Motor1_Forward(void){
+     ^
+src/main.c(132): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Motor1_Forward(void){
+^
+static 
+src/main.c(137): warning: no previous prototype for function 'Motor2_Backward' [-Wmissing-prototypes]
+void Motor2_Backward(void){
+     ^
+src/main.c(137): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Motor2_Backward(void){
+^
+static 
+src/main.c(143): warning: no previous prototype for function 'Motor2_Forward' [-Wmissing-prototypes]
+void Motor2_Forward(void){
+     ^
+src/main.c(143): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Motor2_Forward(void){
+^
+static 
+src/main.c(193): warning: declaration shadows a variable in the global scope [-Wshadow]
+        char rxByte;
+             ^
+src/main.c(32): note: previous declaration is here
+volatile char rxByte;
+              ^
+src/main.c(193): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        char rxByte;
+             ^
+src/main.c(32): warning: no previous extern declaration for non-static variable 'rxByte' [-Wmissing-variable-declarations]
+volatile char rxByte;
+              ^
+src/main.c(32): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile char rxByte;
+         ^
+22 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=21736 RO-data=1204 RW-data=3044 ZI-data=1876  
+FromELF: creating hex file...
+".\Objects\project.axf" - 0 Error(s), 22 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32L4xx_DFP.2.6.1.pack
+                Keil.STM32L4xx_DFP.2.6.1
+                STMicroelectronics STM32L4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/Jack/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Jack/AppData/Local/Arm/Packs/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

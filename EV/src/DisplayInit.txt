@@ -1,0 +1,114 @@
+void Display_init(SPI_TypeDef *SPIx) {
+  // (Display off)
+  //hspi_cmd(SPIx, 0x28);
+
+  // Issue a series of initialization commands from the
+  // Adafruit library for a simple 'known good' test.
+  // (TODO: Add named macro definitions for these hex values.)
+  hspi_cmd(SPIx, 0xEF);
+  Display_Send_Byte(SPIx, 0x03);
+  Display_Send_Byte(SPIx, 0x80);
+  Display_Send_Byte(SPIx, 0x02);
+  hspi_cmd(SPIx, 0xCF);
+  Display_Send_Byte(SPIx, 0x00);
+  Display_Send_Byte(SPIx, 0xC1);
+  Display_Send_Byte(SPIx, 0x30);
+  hspi_cmd(SPIx, 0xED);
+  Display_Send_Byte(SPIx, 0x64);
+  Display_Send_Byte(SPIx, 0x03);
+  Display_Send_Byte(SPIx, 0x12);
+  Display_Send_Byte(SPIx, 0x81);
+  hspi_cmd(SPIx, 0xE8);
+  Display_Send_Byte(SPIx, 0x85);
+  Display_Send_Byte(SPIx, 0x00);
+  Display_Send_Byte(SPIx, 0x78);
+  hspi_cmd(SPIx, 0xCB);
+  Display_Send_Byte(SPIx, 0x39);
+  Display_Send_Byte(SPIx, 0x2C);
+  Display_Send_Byte(SPIx, 0x00);
+  Display_Send_Byte(SPIx, 0x34);
+  Display_Send_Byte(SPIx, 0x02);
+  hspi_cmd(SPIx, 0xF7);
+  Display_Send_Byte(SPIx, 0x20);
+  hspi_cmd(SPIx, 0xEA);
+  Display_Send_Byte(SPIx, 0x00);
+  Display_Send_Byte(SPIx, 0x00);
+  // PWCTR1
+  hspi_cmd(SPIx, 0xC0);
+  Display_Send_Byte(SPIx, 0x23);
+  // PWCTR2
+  hspi_cmd(SPIx, 0xC1);
+  Display_Send_Byte(SPIx, 0x10);
+  // VMCTR1
+  hspi_cmd(SPIx, 0xC5);
+  Display_Send_Byte(SPIx, 0x3E);
+  Display_Send_Byte(SPIx, 0x28);
+  // VMCTR2
+  hspi_cmd(SPIx, 0xC7);
+  Display_Send_Byte(SPIx, 0x86);
+  // MADCTL
+  hspi_cmd(SPIx, 0x36);
+  Display_Send_Byte(SPIx, 0x48);
+  // VSCRSADD
+  hspi_cmd(SPIx, 0x37);
+  Display_Send_Byte(SPIx, 0x00);
+  // PIXFMT
+  hspi_cmd(SPIx, 0x3A);
+  Display_Send_Byte(SPIx, 0x55);
+  // FRMCTR1
+  hspi_cmd(SPIx, 0xB1);
+  Display_Send_Byte(SPIx, 0x00);
+  Display_Send_Byte(SPIx, 0x18);
+  // DFUNCTR
+  hspi_cmd(SPIx, 0xB6);
+  Display_Send_Byte(SPIx, 0x08);
+  Display_Send_Byte(SPIx, 0x82);
+  Display_Send_Byte(SPIx, 0x27);
+  hspi_cmd(SPIx, 0xF2);
+  Display_Send_Byte(SPIx, 0x00);
+  // GAMMASET
+  hspi_cmd(SPIx, 0x26);
+  Display_Send_Byte(SPIx, 0x01);
+  // (Actual gamma settings)
+  hspi_cmd(SPIx, 0xE0);
+  Display_Send_Byte(SPIx, 0x0F);
+  Display_Send_Byte(SPIx, 0x31);
+  Display_Send_Byte(SPIx, 0x2B);
+  Display_Send_Byte(SPIx, 0x0C);
+  Display_Send_Byte(SPIx, 0x0E);
+  Display_Send_Byte(SPIx, 0x08);
+  Display_Send_Byte(SPIx, 0x4E);
+  Display_Send_Byte(SPIx, 0xF1);
+  Display_Send_Byte(SPIx, 0x37);
+  Display_Send_Byte(SPIx, 0x07);
+  Display_Send_Byte(SPIx, 0x10);
+  Display_Send_Byte(SPIx, 0x03);
+  Display_Send_Byte(SPIx, 0x0E);
+  Display_Send_Byte(SPIx, 0x09);
+  Display_Send_Byte(SPIx, 0x00);
+  hspi_cmd(SPIx, 0xE1);
+  Display_Send_Byte(SPIx, 0x00);
+  Display_Send_Byte(SPIx, 0x0E);
+  Display_Send_Byte(SPIx, 0x14);
+  Display_Send_Byte(SPIx, 0x03);
+  Display_Send_Byte(SPIx, 0x11);
+  Display_Send_Byte(SPIx, 0x07);
+  Display_Send_Byte(SPIx, 0x31);
+  Display_Send_Byte(SPIx, 0xC1);
+  Display_Send_Byte(SPIx, 0x48);
+  Display_Send_Byte(SPIx, 0x08);
+  Display_Send_Byte(SPIx, 0x0F);
+  Display_Send_Byte(SPIx, 0x0C);
+  Display_Send_Byte(SPIx, 0x31);
+  Display_Send_Byte(SPIx, 0x36);
+  Display_Send_Byte(SPIx, 0x0F);
+
+  // Exit sleep mode.
+  hspi_cmd(SPIx, 0x11);
+  delay(125);
+  // Display on.
+  hspi_cmd(SPIx, 0x29);
+  delay(125);
+  // 'Normal' display mode.
+  hspi_cmd(SPIx, 0x13);
+}
